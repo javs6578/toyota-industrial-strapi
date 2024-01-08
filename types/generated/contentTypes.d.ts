@@ -362,77 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiForkliftForklift extends Schema.CollectionType {
-  collectionName: 'forklifts';
-  info: {
-    singularName: 'forklift';
-    pluralName: 'forklifts';
-    displayName: 'Forklift';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    model: Attribute.String;
-    load_capacity: Attribute.String;
-    height_capacity: Attribute.String;
-    equip: Attribute.String;
-    img: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::forklift.forklift',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::forklift.forklift',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiQuoteQuote extends Schema.CollectionType {
-  collectionName: 'quotes';
-  info: {
-    singularName: 'quote';
-    pluralName: 'quotes';
-    displayName: 'Quote';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    company: Attribute.String;
-    email: Attribute.String;
-    city: Attribute.String;
-    condition: Attribute.String;
-    type: Attribute.String;
-    quantity: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::quote.quote',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::quote.quote',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -839,6 +768,176 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiBranchOfficeBranchOffice extends Schema.CollectionType {
+  collectionName: 'branch_offices';
+  info: {
+    singularName: 'branch-office';
+    pluralName: 'branch-offices';
+    displayName: 'Branch_Office';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::branch-office.branch-office',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::branch-office.branch-office',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiForkliftForklift extends Schema.CollectionType {
+  collectionName: 'forklifts';
+  info: {
+    singularName: 'forklift';
+    pluralName: 'forklifts';
+    displayName: 'Forklift';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    model: Attribute.String;
+    load_capacity: Attribute.String;
+    height_capacity: Attribute.String;
+    equip: Attribute.String;
+    img: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::forklift.forklift',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::forklift.forklift',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPolicyPolicy extends Schema.CollectionType {
+  collectionName: 'policies';
+  info: {
+    singularName: 'policy';
+    pluralName: 'policies';
+    displayName: 'Policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    model: Attribute.String;
+    type: Attribute.String;
+    name: Attribute.String;
+    company: Attribute.String;
+    email: Attribute.String;
+    city: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::policy.policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::policy.policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiQuoteQuote extends Schema.CollectionType {
+  collectionName: 'quotes';
+  info: {
+    singularName: 'quote';
+    pluralName: 'quotes';
+    displayName: 'Quote';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    company: Attribute.String;
+    email: Attribute.String;
+    city: Attribute.String;
+    condition: Attribute.String;
+    type: Attribute.String;
+    quantity: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::quote.quote',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::quote.quote',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRepairRepair extends Schema.CollectionType {
+  collectionName: 'repairs';
+  info: {
+    singularName: 'repair';
+    pluralName: 'repairs';
+    displayName: 'Repair';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    company: Attribute.String;
+    email: Attribute.String;
+    city: Attribute.String;
+    equips_quantity: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::repair.repair',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::repair.repair',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -849,8 +948,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::forklift.forklift': ApiForkliftForklift;
-      'api::quote.quote': ApiQuoteQuote;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -859,6 +956,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::branch-office.branch-office': ApiBranchOfficeBranchOffice;
+      'api::forklift.forklift': ApiForkliftForklift;
+      'api::policy.policy': ApiPolicyPolicy;
+      'api::quote.quote': ApiQuoteQuote;
+      'api::repair.repair': ApiRepairRepair;
     }
   }
 }

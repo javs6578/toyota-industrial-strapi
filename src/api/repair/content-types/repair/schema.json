@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "repairs",
+  "info": {
+    "singularName": "repair",
+    "pluralName": "repairs",
+    "displayName": "Repair"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "equips_quantity": {
+      "type": "string"
+    }
+  }
+}
