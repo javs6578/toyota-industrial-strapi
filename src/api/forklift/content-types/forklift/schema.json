@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forklifts",
+  "info": {
+    "singularName": "forklift",
+    "pluralName": "forklifts",
+    "displayName": "Forklift"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "model": {
+      "type": "string"
+    },
+    "load_capacity": {
+      "type": "string"
+    },
+    "height_capacity": {
+      "type": "string"
+    },
+    "equip": {
+      "type": "string"
+    }
+  }
+}

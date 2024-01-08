@@ -362,6 +362,39 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiForkliftForklift extends Schema.CollectionType {
+  collectionName: 'forklifts';
+  info: {
+    singularName: 'forklift';
+    pluralName: 'forklifts';
+    displayName: 'Forklift';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    model: Attribute.String;
+    load_capacity: Attribute.String;
+    height_capacity: Attribute.String;
+    equip: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::forklift.forklift',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::forklift.forklift',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiQuoteQuote extends Schema.CollectionType {
   collectionName: 'quotes';
   info: {
@@ -814,6 +847,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::forklift.forklift': ApiForkliftForklift;
       'api::quote.quote': ApiQuoteQuote;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
