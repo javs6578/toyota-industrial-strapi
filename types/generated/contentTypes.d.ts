@@ -368,6 +368,7 @@ export interface ApiForkliftForklift extends Schema.CollectionType {
     singularName: 'forklift';
     pluralName: 'forklifts';
     displayName: 'Forklift';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -377,6 +378,7 @@ export interface ApiForkliftForklift extends Schema.CollectionType {
     load_capacity: Attribute.String;
     height_capacity: Attribute.String;
     equip: Attribute.String;
+    img: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
